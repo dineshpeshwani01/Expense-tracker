@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="/css/index.css">
+    
+</head>
+<body>
+    <div class="header">
+         Expense Tracker
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="topbar">
+                <p class="text">Your Current Balance</p>
+                <p class="amount-holder">
+                    <span id="currency">₹</span>
+                    <span id="balance">200</span>
+                </p>
+            </div>
+            <div class="form">
+                <p>Add Transaction</p>
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name"  placeholder="E.g Groceries">
+                </div>
+                <div class="form-control">
+                    <label for="name">Type</label>
+                    <div class="radio">
+                        <input type="radio" name="type" id="income" checked>
+                        <label for="radio">Income</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="type" id="expense">
+                        <label for="radio">Expense</label>
+                    </div>
+                </div>
+                <div class="form-control">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="e.g ₹400">
+                </div>
+                <button class="btn" id="save">Save Transaction</button>
+                <button class="btn" id="cancel">Cancel Edit</button>
+            </div>
+            <p class="heading">Transaction List</p>
+
+            <ul id="list-of-transaction">
+                <li class="transaction income">
+                    <p>Income 1</p>
+                    <div class="right-side">
+                        <p>₹500</p>
+                        <button><i class="fas fa-edit"></i></button>
+                        <button><i class="fas fa-trash"></i></button>
+                    </div>
+                </li>
+                
+                <li class="transaction expense">
+                    <p>Expense 1</p>
+                    <div class="right-side">
+                        <p>₹300</p>
+                        <button><i class="fas fa-edit"></i></button>
+                        <button><i class="fas fa-trash"></i></button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+       Made By Dinesh Peshwani
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/js/index.js"></script>
+</body>
+</html>

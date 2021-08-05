@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header , .footer{
+    background-color: #264826;
+    font-family: "Red Hat Display", sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.header{
+    font-size: 2rem;
+}
+
+.topbar{
+    background-color: #264826;
+    color: #ffffff;
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.text{
+    color: #eee;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.amount-holder{
+    font-size: 1.5rem;
+}
+
+.form{
+    background-color: #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 25px;
+}
+
+.form p{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+label , input{
+    display: block;
+    margin-left: 15px;
+} 
+
+input{
+    padding: 5px 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.radio{
+    display: flex;
+    align-items: center;
+    transition: ease-in-out 0.5s;
+}
+
+.radio:hover{
+    transform: scale(1.08);
+}
+
+button{
+    outline: none;
+    border: none;
+    background: none;
+}
+
+#name,
+#amount{
+    border-style: groove;
+    background: #fff;
+    border-radius: 10px;
+    border-color: #cccccc;
+    width: 40vw;
+    margin-left: 15px;
+}
+
+.btn{
+    display: block;
+    width: 40vw;
+    border-radius: 35px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    background-color: #264826;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: 1s;
+}
+
+.btn:hover{
+    background-color: #264826;
+    transform: scale(1.08);
+}
+
+p.heading{
+    margin: 10px 0px;
+}
+
+ul{
+    list-style:none;
+}
+
+.transaction{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+   color: white;
+   border-radius: 15px;
+   margin-bottom: 5px;
+}
+
+.income{
+    background-color: #264826;
+}
+
+.expense{
+    background-color: red;
+}
+
+.right-side{
+    display: flex;
+    gap: 5px;
+    font-size: 15px; 
+}
+
+.right-side button{
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.right-side button:hover{
+    color: yellowgreen;
+    cursor: pointer;
+    transform: scale(1.08);
+}
+
+#cancel{
+    background-color: red;
+    display: none;
+}
+
