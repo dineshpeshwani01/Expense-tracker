@@ -9,11 +9,8 @@ const cancelButton = document.getElementById("cancel")
 const displayList = document.getElementById("list-of-transaction")
 
 let symbol = "₹";
-
 let listOfTransactions = [];
-
 let currentBalance = 0;
-
 let editIndex = -1;
 
 function edit(i){
@@ -48,6 +45,8 @@ function loadData() {
 function render(){
     currentBalance = listOfTransactions.reduce((total, value) => 
     {return value.type == "expense" ? total - value.amount : total + value.amount}, 0);
+
+   
 
     displayList.innerHTML = "";
  
@@ -99,12 +98,13 @@ saveButton.addEventListener("click", () => {
     }
     else{
         listOfTransactions[editIndex] = transaction;
+        
     }
     editIndex = -1
     txnNameHolder.value = "";
     txnAmountHolder.value = "";
     render();
-    cancelButton.style.display = none;
+    cancelButton.style.display = "none";
 })
 
 loadData();
