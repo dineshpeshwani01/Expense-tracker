@@ -39,7 +39,11 @@ function saveData() {
 function render(){
     currentBalance = listOfTransactions.reduce((total, value) => 
     {return value.type == "expense" ? total - value.amount : total + value.amount}, 0);
+
+   
+
     displayList.innerHTML = "";
+ 
     if(listOfTransactions.length == 0){
         displayList.innerHTML += "No Transaction Found"
     }
@@ -58,6 +62,7 @@ function render(){
             `;
         })
     }
+
     currencyHolder.innerHTML = symbol;
     balanceHolder.innerHTML = currentBalance;
     saveData(); 
