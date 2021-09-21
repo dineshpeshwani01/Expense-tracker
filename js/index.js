@@ -36,20 +36,10 @@ function saveData() {
     localStorage.setItem("list", JSON.stringify(listOfTransactions));
 }
 
-function loadData() {
-     symbol = localStorage.getItem("symbol");
-     listOfTransactions = JSON.parse(localStorage.getItem("list"));
-     currentBalance = Number(localStorage.getItem("balance"));
-}
-
 function render(){
     currentBalance = listOfTransactions.reduce((total, value) => 
     {return value.type == "expense" ? total - value.amount : total + value.amount}, 0);
-
-   
-
     displayList.innerHTML = "";
- 
     if(listOfTransactions.length == 0){
         displayList.innerHTML += "No Transaction Found"
     }
@@ -68,7 +58,6 @@ function render(){
             `;
         })
     }
-
     currencyHolder.innerHTML = symbol;
     balanceHolder.innerHTML = currentBalance;
     saveData(); 
