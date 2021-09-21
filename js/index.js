@@ -30,24 +30,15 @@ function del(i){
     render(); 
 }
 
-function saveData() {
-    localStorage.setItem("symbol",symbol);
-    localStorage.setItem("balance",currentBalance);
-    localStorage.setItem("list", JSON.stringify(listOfTransactions));
-}
 
 function render(){
     currentBalance = listOfTransactions.reduce((total, value) => 
     {return value.type == "expense" ? total - value.amount : total + value.amount}, 0);
-
-   
-
     displayList.innerHTML = "";
- 
+
     if(listOfTransactions.length == 0){
         displayList.innerHTML += "No Transaction Found"
     }
-
     else{
         listOfTransactions.forEach((e,i) => {
             displayList.innerHTML += 
@@ -101,5 +92,4 @@ saveButton.addEventListener("click", () => {
     cancelButton.style.display = "none";
 })
 
-loadData();
 render();
